@@ -19,6 +19,71 @@
 # ║    Years without cutouts need cutout generation via Snakefile_cutouts     ║
 # ╚════════════════════════════════════════════════════════════════════════════╝
 
+Martas_test_2019:
+  description: "2019 Historical - Reduced Network (17 zones)"
+  modelled_year: 2019
+  renewables_year: 2019
+  demand_year: 2019
+  network_model: "Reduced"
+  solve_period:
+    enabled: true
+    start: "2019-01-01 00:00"
+    end: "2019-02-28 23:00"
+  solver:
+    name: "highs"
+
+Martas_Q1_zonal_2020:
+  description: "2020 Historical - Zonal Network (17 zones)"
+  modelled_year: 2020
+  renewables_year: 2020
+  demand_year: 2020
+  network_model: "Zonal"
+  solve_period:
+    enabled: true
+    start: "2020-01-01 00:00"
+    end: "2020-03-31 23:00"
+  solver:
+    name: "highs"
+
+Martas_Q2_zonal_2020:
+  description: "2020 Historical - Zonal Network (17 zones)"
+  modelled_year: 2020
+  renewables_year: 2020
+  demand_year: 2020
+  network_model: "Zonal"
+  solve_period:
+    enabled: true
+    start: "2020-04-01 00:00"
+    end: "2020-06-30 23:00"
+  solver:
+    name: "highs"
+
+Martas_Q3_zonal_2020:
+  description: "2020 Historical - Zonal Network (17 zones)"
+  modelled_year: 2020
+  renewables_year: 2020
+  demand_year: 2020
+  network_model: "Zonal"
+  solve_period:
+    enabled: true
+    start: "2020-07-01 00:00"
+    end: "2020-09-30 23:00"
+  solver:
+    name: "highs"
+
+Martas_Q4_zonal_2020:
+  description: "2020 Historical - Zonal Network (17 zones)"
+  modelled_year: 2020
+  renewables_year: 2020
+  demand_year: 2020
+  network_model: "Zonal"
+  solve_period:
+    enabled: true
+    start: "2020-10-01 00:00"
+    end: "2020-12-31 23:00"
+  solver:
+    name: "highs"
+
 Historical_2020_reduced:
   description: "2020 Historical - Reduced Network (32 buses)"
   modelled_year: 2020
@@ -316,9 +381,21 @@ HT35_flex:
   demand_flexibility:
     enabled: true
     heat_pumps:
-      enabled: false
+      enabled: true
+      flexibility:
+        enabled: true
+        tank_share: 0.5
+        cosy_share: 0.5
+
     electric_vehicles:
-      enabled: false
+      enabled: true
+      flexibility:
+        enabled: true
+        battery_share: 0.5
+        smart_charging_share: 0.5
+        v2g_share: 0.0
+
+        
     event_response:
       enabled: true
       event_window: ["17:00", "19:00"]  # Realistic 2-hour evening peak window
@@ -409,6 +486,8 @@ HT35_reduced:
   renewables_year: 2020
   demand_year: 2010
   network_model: "Reduced"
+  solver:
+    name: "highs"
 
 HT35_reduced_eload:
   description: "FES 2024 HT 2035 - Reduced Network with eLOAD profile"
@@ -1747,6 +1826,8 @@ Validation_Jan2020_UniformNetworkBaseline:
       wind_offshore: 0.6388580
       wind_onshore: 0.8404980
       solar_pv: 0.6787250
+  solver:
+    name: "highs"
 
 Validation_Feb2020_UniformNetworkBaseline:
   <<: *validation_2020_bm24_softseimp_base
@@ -1762,6 +1843,8 @@ Validation_Feb2020_UniformNetworkBaseline:
       wind_offshore: 0.6237140
       wind_onshore: 0.8205750
       solar_pv: 0.7353290
+  solver:
+    name: "highs"
 
 Validation_Mar2020_UniformNetworkBaseline:
   <<: *validation_2020_bm24_softseimp_base
@@ -1777,6 +1860,8 @@ Validation_Mar2020_UniformNetworkBaseline:
       wind_offshore: 0.6583380
       wind_onshore: 0.8661270
       solar_pv: 0.8220860
+  solver:
+    name: "highs"
 
 Validation_Apr2020_UniformNetworkBaseline:
   <<: *validation_2020_bm24_softseimp_base
@@ -1792,6 +1877,8 @@ Validation_Apr2020_UniformNetworkBaseline:
       wind_offshore: 0.6842010
       wind_onshore: 0.9001530
       solar_pv: 0.8517150
+  solver:
+    name: "highs"
 
 Validation_May2020_UniformNetworkBaseline:
   <<: *validation_2020_bm24_softseimp_base
@@ -1807,6 +1894,8 @@ Validation_May2020_UniformNetworkBaseline:
       wind_offshore: 0.6563030
       wind_onshore: 0.8634490
       solar_pv: 0.8575040
+  solver:
+    name: "highs"
 
 Validation_Jun2020_UniformNetworkBaseline:
   <<: *validation_2020_bm24_softseimp_base
@@ -1822,6 +1911,8 @@ Validation_Jun2020_UniformNetworkBaseline:
       wind_offshore: 0.6460010
       wind_onshore: 0.9013970
       solar_pv: 0.8566660
+  solver:
+    name: "highs"
 
 Validation_Jul2020_UniformNetworkBaseline:
   <<: *validation_2020_bm24_softseimp_base
@@ -1837,6 +1928,8 @@ Validation_Jul2020_UniformNetworkBaseline:
       wind_offshore: 0.6262290
       wind_onshore: 0.8238840
       solar_pv: 0.8587200
+  solver:
+    name: "highs"
 
 Validation_Aug2020_UniformNetworkBaseline:
   <<: *validation_2020_bm24_softseimp_base
@@ -1852,6 +1945,8 @@ Validation_Aug2020_UniformNetworkBaseline:
       wind_offshore: 0.6425350
       wind_onshore: 0.8453360
       solar_pv: 0.8447640
+  solver:
+    name: "highs"
 
 Validation_Sep2020_UniformNetworkBaseline:
   <<: *validation_2020_bm24_softseimp_base
@@ -1867,6 +1962,8 @@ Validation_Sep2020_UniformNetworkBaseline:
       wind_offshore: 0.6350170
       wind_onshore: 0.8354440
       solar_pv: 0.8297940
+  solver:
+    name: "highs"
 
 Validation_Oct2020_UniformNetworkBaseline:
   <<: *validation_2020_bm24_softseimp_base
@@ -1882,6 +1979,8 @@ Validation_Oct2020_UniformNetworkBaseline:
       wind_offshore: 0.6426060
       wind_onshore: 0.8454290
       solar_pv: 0.7714130
+  solver:
+    name: "highs"
 
 Validation_Nov2020_UniformNetworkBaseline:
   <<: *validation_2020_bm24_softseimp_base
@@ -1897,6 +1996,8 @@ Validation_Nov2020_UniformNetworkBaseline:
       wind_offshore: 0.5984440
       wind_onshore: 0.7873290
       solar_pv: 0.7113920
+  solver:
+    name: "highs"
 
 Validation_Dec2020_UniformNetworkBaseline:
   <<: *validation_2020_bm24_softseimp_base
@@ -1912,6 +2013,8 @@ Validation_Dec2020_UniformNetworkBaseline:
       wind_offshore: 0.6487520
       wind_onshore: 0.8845250
       solar_pv: 0.6603980
+  solver:
+    name: "highs"
 
 Validation_Feb2020_1hLegacy: &validation_2020_month_base
   description: "February 2020 full month - winter rolling market validation"

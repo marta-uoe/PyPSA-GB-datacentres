@@ -24,7 +24,14 @@ years_config:
   
   # Manual list of years (used when method is "manual" or "all_scenarios_plus_manual")
   years_to_generate:
-    - 2015
+    - 2010 # low wind
+    - 2013 # low wind
+    - 2017 # average
+    - 2018 # relatively high solar
+    - 2019 # average wind/slightly below
+    - 2020 # high wind & good solar
+    - 2022 # sunny
+  
   
   # Additional years to always include regardless of method
   always_include: []  # Remove 2020 to focus on 2021 only
