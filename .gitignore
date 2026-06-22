@@ -30,3 +30,8 @@ temp_*
 resources/
 data/FES/*.xlsx
 data/FES/*.xlsb
+tests/ukpn-data-centre-demand-profiles.csv
+docs/build/
+data/demand/espeni.csv
+data/validation/
+.DS_Store
