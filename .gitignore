@@ -26,3 +26,7 @@ temp_*
 
 # secrets / API tokens
 .env
+*.nc
+resources/
+data/FES/*.xlsx
+data/FES/*.xlsb
