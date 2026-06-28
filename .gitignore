@@ -35,3 +35,6 @@ docs/build/
 data/demand/espeni.csv
 data/validation/
 .DS_Store
+data/
+data/
+docs/build/
