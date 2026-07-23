@@ -16,7 +16,7 @@
 
 run_scenarios:
   # - Martas_test_2019
-  # - Martas_Q1_zonal_2020
+  - Martas_Q1_zonal_2020
   # - Martas_Q2_zonal_2020
   # - Martas_Q3_zonal_2020
   # - Martas_Q4_zonal_2020
@@ -47,8 +47,8 @@ run_scenarios:
   # - HT35_zonal
   # - HT35_clustered_gsp
   # - HT35_clustered_kmeans
-  - HT35_clustered_kmeans_1_week_Apr
-  - HT35_clustered_kmeans_1_week_Nov
+  # - HT35_clustered_kmeans_1_week_Apr
+  # - HT35_clustered_kmeans_1_week_Nov
   # - HT35_with_disaggregation
   # - HT35_flex
   # - HT30_event_response

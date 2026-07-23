@@ -42,8 +42,6 @@ Martas_Q1_zonal_2020:
     enabled: true
     start: "2020-01-01 00:00"
     end: "2020-03-31 23:00"
-  solver:
-    name: "highs"
 
 Martas_Q2_zonal_2020:
   description: "2020 Historical - Zonal Network (17 zones)"
