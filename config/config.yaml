@@ -15,8 +15,16 @@
 # Multiple scenarios run in parallel based on Snakemake -j flag
 
 run_scenarios:
+  - Martas_Q1_clustered_2030
+  - Martas_Q2_clustered_2030
+  - Martas_Q3_clustered_2030
+  - Martas_Q4_clustered_2030
+  # - Martas_Q1_reduced_2030
+  # - Martas_Q2_reduced_2030
+  # - Martas_Q3_reduced_2030
+  # - Martas_Q4_reduced_2030
   # - Martas_test_2019
-  - Martas_Q1_zonal_2020
+  # - Martas_Q1_zonal_2020
   # - Martas_Q2_zonal_2020
   # - Martas_Q3_zonal_2020
   # - Martas_Q4_zonal_2020

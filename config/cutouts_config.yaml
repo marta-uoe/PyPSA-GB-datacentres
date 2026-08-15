@@ -21,16 +21,18 @@ years_config:
   # - "from_scenarios": Extract from scenarios_master.yaml automatically
   # - "all_scenarios_plus_manual": Combine both approaches
   method: "manual"
-  
+
+  years_to_process: [2020, 2030]
+
   # Manual list of years (used when method is "manual" or "all_scenarios_plus_manual")
   years_to_generate:
-    - 2010 # low wind
-    - 2013 # low wind
-    - 2017 # average
-    - 2018 # relatively high solar
-    - 2019 # average wind/slightly below
+    # - 2010 # low wind
+    # - 2013 # low wind
+    # - 2017 # average
+    # - 2018 # relatively high solar
+    # - 2019 # average wind/slightly below
     - 2020 # high wind & good solar
-    - 2022 # sunny
+    # - 2022 # sunny
   
   
   # Additional years to always include regardless of method
@@ -41,7 +43,7 @@ years_config:
 # ────────────────────────────────────────────────────────────
 download:
   # Maximum parallel cutout downloads
-  max_parallel_downloads: 1
+  max_parallel_downloads: 4
   
   # Retry configuration for failed downloads
   retry:
