@@ -38,3 +38,4 @@ data/validation/
 data/
 data/
 docs/build/
+.env
